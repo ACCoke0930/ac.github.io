@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <span class="menu-icon">☰</span>
+
+    <header>
+        <h1>AC</h1>
+    </header>
+
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-content">
+            <a href="javascript:void(0)" data-section="my-links">首页</a>
+            <a href="javascript:void(0)" data-section="files">文件</a>
+            <a href="javascript:void(0)" data-section="games">游戏</a>
+            <a href="javascript:void(0)" data-section="test">测试</a>
+            <a href="javascript:void(0)" data-section="apple-history">苹果公司的历史</a>
+        </div>
+        <div class="sidebar-bottom-buttons">
+            <a href="/login" class="login-button">Login</a>
+            <a href="/register" class="signup-button">Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <section id="my-links" class="section active">
+            <h2>我的社交媒体</h2>
+            <div class="image-container">
+                <a href="https://www.douyin.com/user/MS4wLjABAAAAcgm1ZIBHJSoZccFEDxL5tJHZoc8XxVcM5M4JSRd4QRI?from_tab_name=main" target="_blank">
+                    <img src="images/tiktok.png" alt="My Links Image" class="my-links-image">
+                    <p class="image-caption">抖音</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="files" class="section">
+            <h2>文件</h2>
+            <p>这里是文件内容。</p>
+        </section>
+
+        <section id="games" class="section">
+            <h2>游戏</h2>
+            <p>这里是游戏栏目，但没有具体内容。</p>
+        </section>
+
+        <section id="test" class="section">
+            <h2>测试</h2>
+            <p>这里是测试内容。</p>
+        </section>
+
+        <section id="apple-history" class="section">
+            <h2>苹果公司的历史</h2>
+            <p>苹果公司（Apple Inc.）是全球最具影响力的科技公司之一，其历史可以追溯到1976年。由史蒂夫·乔布斯（Steve Jobs）、史蒂夫·沃兹尼亚克（Steve Wozniak）和罗恩·韦恩（Ron Wayne）共同创立，苹果公司最初的目标是设计和销售个人电脑。</p>
+            <p>1976年，苹果公司推出了第一款产品——Apple I。这是一台由沃兹尼亚克手工组装的电脑，虽然功能简单，但它为个人电脑的发展奠定了基础。随后，Apple II在1977年问世，成为第一款大规模生产的个人电脑，取得了巨大的商业成功。</p>
+            <p>1984年，苹果公司推出了Macintosh电脑，这是第一款采用图形用户界面（GUI）的个人电脑。Macintosh的推出彻底改变了人机交互的方式，为后来的操作系统设计树立了标杆。</p>
+            <p>然而，苹果公司在20世纪80年代末和90年代初经历了一段低谷期。由于市场竞争加剧和管理问题，苹果的业绩大幅下滑。1997年，史蒂夫·乔布斯重返苹果公司，并带领公司进行了一系列改革。</p>
+            <p>乔布斯的回归标志着苹果公司的复兴。1998年，苹果推出了iMac，这款设计独特的电脑迅速成为市场热门产品。2001年，苹果发布了iPod，彻底改变了音乐产业。随后，苹果在2007年推出了iPhone，这款智能手机不仅重新定义了手机行业，还开启了移动互联网的新时代。</p>
+            <p>2010年，苹果发布了iPad，开创了平板电脑市场。此后，苹果公司不断创新，推出了Apple Watch、AirPods等一系列产品，进一步巩固了其在科技行业的领导地位。</p>
+            <p>苹果公司的成功不仅在于其创新的产品，还在于其强大的生态系统。通过iOS、macOS、watchOS等操作系统，苹果将硬件、软件和服务无缝整合，为用户提供了极致的体验。</p>
+            <p>如今，苹果公司已成为全球市值最高的公司之一，其产品和服务遍布全球。苹果公司的历史不仅是一部科技创新的历史，更是一部改变世界的传奇。</p>
+        </section>
+    </div>
+
+    <script>
+        // 登录状态检查
+        if (window.location.pathname === '/index.html' && !sessionStorage.getItem('loggedIn')) {
+            window.location.href = '/login';
+        }
+
+        function logout() {
+            sessionStorage.removeItem('loggedIn');
+            window.location.href = '/login';
+        }
+    </script>
+
+    <script src="scripts.js"></script>
+    <!-- 暂时移除 Cloudflare 脚本以避免干扰 -->
+    <!-- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;...})();</script> -->
+</body>
+</html>
